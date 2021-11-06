@@ -14,14 +14,14 @@ deg1[2] = round(deg1[2]/3600, 4)
 
 deg = sum(deg1)
 
-bbs = 0
+b_bearing = 0
 
 if deg > 180.0:
-    bbs = deg - 180
+    b_bearing = deg - 180
 elif deg < 180:
-    bbs = deg + 180
+    b_bearing = deg + 180
 
-sd = math.modf(bbs)
+sd = math.modf(b_bearing)
 
 degs = int(sd[1])
 
