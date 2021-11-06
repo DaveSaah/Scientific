@@ -9,13 +9,10 @@ except:
     deg1 = [float(x) for x in f_bearing.split()]
 
 deg1[0] = round(deg1[0], 0)
-deg1[1] = round(deg1[1]/60, 1)
-deg1[2] = round(deg1[2]/60, 1)
+deg1[1] = round(deg1[1]/60, 4)
+deg1[2] = round(deg1[2]/3600, 4)
 
-deg = 0
-
-for x in deg1:
-    deg += x
+deg = sum(deg1)
 
 bbs = 0
 
@@ -36,4 +33,4 @@ mins = int(sf[1])
 sa1 = sf[0]*60
 secs = round(sa1, 2)
 
-print('Back bearing is: {0}°{1}\'{2}\"'.format(degs, mins, secs))
+print('Back bearing is: {0}° {1}\' {2}\"'.format(degs, mins, secs))
